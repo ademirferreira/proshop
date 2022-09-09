@@ -23,7 +23,8 @@
   "homepage": "https://github.com/ademirferreira/proshop#readme",
   "dependencies": {
     "dotenv": "^16.0.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^6.6.0"
   },
   "devDependencies": {
     "concurrently": "^7.4.0",
