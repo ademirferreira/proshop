@@ -185,12 +185,6 @@ const OrderScreen = ({ match, history }) => {
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Tax</Col>
-                  <Col>${order.taxPrice}</Col>
-                </Row>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <Row>
                   <Col>Total</Col>
                   <Col>${order.totalPrice}</Col>
                 </Row>
