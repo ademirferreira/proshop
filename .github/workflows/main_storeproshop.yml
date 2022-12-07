@@ -25,11 +25,14 @@ jobs:
         run: |
           npm run azure-postbuild
 
+      - name: Zip artifact for deployment
+        run: zip release.zip ./* -r
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,4 +54,7 @@ jobs:
           app-name: 'storeproshop'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1410DF12559045F0A7AEAECB6CE4DF77 }}
-          package: .
+          package: release.zip
+
+      - name: Delete zip file
+        run: rm release.zip
