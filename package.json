@@ -14,7 +14,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
-    "azure-postbuild": "cd frontend && npm install && npm run build && cd .. && npm install"
+    "azure-postbuild": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
